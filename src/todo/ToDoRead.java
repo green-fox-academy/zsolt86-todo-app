@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class ToDoRead {
   int counter = 0;
-  Path filePath = Paths.get("textFiles/myToDo.txt");
+  static Path filePath = Paths.get("textFiles/myToDo.txt");
 
   public ToDoRead() throws FileNotFoundException {
     Scanner readFile = new Scanner(new File(String.valueOf(filePath)));
@@ -20,9 +20,7 @@ public class ToDoRead {
         counter++;
         System.out.println(counter + " - " + readFile.nextLine());
       }
+      }
     }
-
-
-  }
 }
 
